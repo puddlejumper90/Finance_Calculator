@@ -3,10 +3,14 @@ import numpy as np
 import scipy as sp
 import pandas as pd
 import matplotlib as mb
+import datetime
 
 #Greeting Message
 print("Welcome you your personal finance calculator! :-)")
-
+time1 = datetime.datetime.now()
+print("CURRENT TIME:", time1)
+current_time = time1
+print("------------------------------------------------------------------------")
 #Inserts two blank lines so that the application is easier to read for the user
 def TBL():
     print("")
@@ -38,7 +42,7 @@ monthly_expenses = float(input("Input your total monthly expenses as a decimal n
 TBL()
 
 left_over = float(monthly_pay - (savings + monthly_expenses))
-thirty_year_savings = float(savings_calc * 30)
+#thirty_year_savings = float(savings_calc * 30)
 
 #Application outputs
 print("Your left over money each month should be: $", left_over)
@@ -49,4 +53,6 @@ print("Your yearly savings should be: $", savings_calc)
 TBL()
 print("If you save at this rate for 30 years, you will have: $", thirty_year_savings, "If you find a way to cut your monthly costs, more money will be available for savings!")
 TBL()
-print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
+
+#Values to be added to application .csv file
+LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over]
