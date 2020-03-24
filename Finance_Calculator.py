@@ -64,19 +64,9 @@ print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more fe
 LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over]
 LIST_OF_ENTRIES =["current_time":current_time, "user":user, "y_salary":y_salary, "y_tax":y_tax, "salary_after_tax":salary_after_tax, "monthly_pay":monthly_pay, "bi_weekly_pay":bi_weekly_pay, "savings":savings, "savings_calc":savings_calc, "salary_after_savings":salary_after_savings, "monthly_savings":monthly_savings, "monthly_expenses":monthly_expenses, "left_over":left_over]
 
-'''
-#Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open 
-line
+
+#Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open line
 def search_and_append():
-    with open("FC_Log.csv"):
-        if not "FC_Log.csv":
-            with open("FC_Log.csv", 'w', newline="LIST_OF_VALUES") as f:
-                write_csv = csv.writer(f)
-
-                write_csv.writerow(LIST_OF_ENTRIES)
-
-        else with open ("FC_Log.csv", "rb") as f:
-            write = write_csv(f)
-            write.writerow(LIST_OF_ENTRIES)
-
-'''
+    with open("FC_Log.csv", "w+", newline="") as file:
+    writer = csv.writer(file)
+    writer.writerow(LIST_OF_VALUES)
