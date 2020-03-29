@@ -61,10 +61,14 @@ TBL()
 print("Your yearly savings should be: $", savings_calc)
 TBL()
 print("If you save at this rate for 30 years, you will have: $", thirty_year_savings, "If you find a way to cut your monthly costs, more money will be available for savings!")
+print("Also, if you decide to invest, there is a good chance that your money will grow with the economy.")
 TBL()
 print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
 
 LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over]
+
+
+#More defined functions
 
 #Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open line
 def search_and_append():
