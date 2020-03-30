@@ -65,13 +65,29 @@ print("Also, if you decide to invest, there is a good chance that your money wil
 TBL()
 print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
 
+LIST_OF_ATTRIBUTES = ["current_time", "user", "y_salary", "y_tax", "salary_after_tax", "monthly_pay", "bi_weekly_pay", "savings", "savings_calc", "salary_after_savings", "monthly_savings", "monthly_expenses", "left_over"]
 LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over]
 
 
 #More defined functions
 
-#Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open line
-def search_and_append():
+def information():
+    print("1. The purpose of this application is to provide you with enough information to make smart decisions when it comes to your finances.")
+    print("2. This application keeps track of all of your inquiries so that you can analyze all of the information via spreadsheet applications.")
+
+
+def search_and_append(): #Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open line
     with open("FC_Log.csv", "w+", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow([List_of_Values])
+        writer.writerow(LIST_OF_ATTRIBUTES)
+        
+def add_row():
+    with open("FC_Log.csv", "a", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(LIST_OF_VALUES)
+        
+#Post-query application
+TBL()
+print()
+print("To create new database, enter 'search_and_append().'")
+print("To add this query to the current database, enter 'add_row().'")
