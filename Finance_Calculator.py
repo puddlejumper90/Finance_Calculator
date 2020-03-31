@@ -9,9 +9,9 @@ import csv
 import getpass
 
 #Greeting Message
-print("Welcome you your personal finance calculator! :-)")
+print("Welcome you your personal finance calculator!")
 time1 = datetime.datetime.now()
-print("CURRENT TIME:", time1)
+print("CURRENT TIME: ", time1)
 current_time = time1
 print("------------------------------------------------------------------------")
 
@@ -26,9 +26,9 @@ TBL()
 #Input values and variables
 user = getpass.getuser()
 filename = "FC_Log.csv"
-y_salary = float(input("Input salary, no special characters are needed:"))
+y_salary = float(input("Input salary, no special characters are needed: "))
 TBL()
-y_tax = float(input("Input expected tax rate as a decimal number (a percentage):"))
+y_tax = float(input("Input expected tax rate as a decimal number (a percentage): "))
 TBL()
 
 salary_after_tax = y_salary - (y_salary * y_tax)
@@ -37,7 +37,7 @@ monthly_pay = (salary_after_tax / 12)
 
 bi_weekly_pay = (monthly_pay / 2)
 
-savings = float(input("Input your estimated savings rate in a decimal number (a percentage):"))
+savings = float(input("Input your estimated savings rate in a decimal number (a percentage): "))
 TBL()
 
 #Additional calculations
@@ -47,7 +47,7 @@ monthly_savings = float(savings_calc / 12)
 
 monthly_expenses = float(input("Input your total monthly expenses as a decimal number:"))
 TBL()
-
+note = input("Please enter a note for this query: ")
 left_over = float(monthly_pay - (savings + monthly_expenses))
 thirty_year_savings = float(savings_calc * 30)
 
@@ -65,8 +65,8 @@ print("Also, if you decide to invest, there is a good chance that your money wil
 TBL()
 print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
 
-LIST_OF_ATTRIBUTES = ["current_time", "user", "y_salary", "y_tax", "salary_after_tax", "monthly_pay", "bi_weekly_pay", "savings", "savings_calc", "salary_after_savings", "monthly_savings", "monthly_expenses", "left_over"]
-LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over]
+LIST_OF_ATTRIBUTES = ["current_time", "user", "y_salary", "y_tax", "salary_after_tax", "monthly_pay", "bi_weekly_pay", "savings", "savings_calc", "salary_after_savings", "monthly_savings", "monthly_expenses", "left_over", "note"]
+LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over, note]
 
 
 #More defined functions
@@ -89,5 +89,3 @@ def add_row():
 #Post-query application
 TBL()
 print()
-print("To create new database, enter 'search_and_append().'")
-print("To add this query to the current database, enter 'add_row().'")
