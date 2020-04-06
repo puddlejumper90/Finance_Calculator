@@ -9,7 +9,7 @@ import csv
 import getpass
 
 #Greeting Message
-print("Welcome you your personal finance calculator! Created by puddlejumpr90.")
+print("Welcome you your personal finance calculator! Created by puddlejumper90.")
 time1 = datetime.datetime.now()
 print("CURRENT TIME: ", time1)
 current_time = time1
