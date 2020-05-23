@@ -86,6 +86,10 @@ def add_row():
         writer = csv.writer(file)
         writer.writerow(LIST_OF_VALUES)
         
+#Create file if it does not exist
+if not os.path.exists('FC_Log.csv'):
+    os.mknod(search_and_append())
+        
 #Post-query application
 TBL()
-print()
+add_row()
