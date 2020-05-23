@@ -13,4 +13,4 @@ This application will continue to become improved over time. Check back often to
 
 DISCLAIMER:
 
-Please remember to backup your data. This application or its creators will not be held responsible for data that is accidentially erased by either the user or the user's computer.
+Please remember to backup your data. This application or its creators will not be held responsible for data that is accidentally erased by either the user or the user's computer.
