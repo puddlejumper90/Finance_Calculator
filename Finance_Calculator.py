@@ -86,10 +86,16 @@ def add_row():
         writer = csv.writer(file)
         writer.writerow(LIST_OF_VALUES)
         
-#Create file if it does not exist
-if not os.path.exists('FC_Log.csv'):
-    os.mknod(search_and_append())
+def create_file(): #No matter what comes after this process, the csv log will already be established.
+    if not os.path.isfile(filename): #This function searches the current directory for the csv file (listed above) and creates it if it does not exist
+        with open (filename, 'w', newline = '') as f:
+            writer = csv.writer(f)
+            writer.writerow(LIST_OF_ATTRIBUTES)  
+            print("Created new csv file.")
+            print("Moving on to next step.")
         
 #Post-query application
+
+create_file()
 TBL()
 add_row()
