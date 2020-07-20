@@ -53,6 +53,7 @@ thirty_year_savings = float(savings_calc * 30)
 
 #Application outputs
 print("----------------------------------------------------------------------------")
+print("After, taxes, your monthly take-home pay is: $", monthly_pay)
 TBL()
 print("Your left over money each month should be: $", left_over)
 TBL()
