@@ -53,7 +53,7 @@ thirty_year_savings = float(savings_calc * 30)
 
 #Application outputs
 print("----------------------------------------------------------------------------")
-print("After, taxes, your monthly take-home pay is: $", monthly_pay)
+print("After taxes, your monthly take-home pay is: $", monthly_pay)
 TBL()
 print("Your left over money each month should be: $", left_over)
 TBL()
@@ -76,12 +76,6 @@ def information():
     print("1. The purpose of this application is to provide you with enough information to make smart decisions when it comes to your finances.")
     print("2. This application keeps track of all of your inquiries so that you can analyze all of the information via spreadsheet applications.")
 
-
-def search_and_append(): #Search for "FC_Log.csv", create file if it does not exist, else add  "LIST_OF_VALUES" to the next open line
-    with open("FC_Log.csv", "w+", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow(LIST_OF_ATTRIBUTES)
-        
 def add_row():
     with open("FC_Log.csv", "a", newline="") as file:
         writer = csv.writer(file)
