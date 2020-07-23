@@ -9,7 +9,7 @@ import csv
 import getpass
 
 #Greeting Message
-print("Welcome you your personal finance calculator! Created by puddlejumper90.")
+print("Welcome to your personal finance calculator! Created by puddlejumper90.")
 time1 = datetime.datetime.now()
 print("CURRENT TIME: ", time1)
 current_time = time1
@@ -17,7 +17,7 @@ print("------------------------------------------------------------------------"
 
 #Defined Functions
 
-def TBL(): #Inserts two blank lines so that the application is easier to read
+def TBL(): #Inserts two blank lines so that the application output is easier to read
     print("")
     print("")
 
@@ -94,3 +94,5 @@ def create_file(): #No matter what comes after this process, the csv log will al
 create_file()
 TBL()
 add_row()
+TBL()
+print("This query has been logged.")
