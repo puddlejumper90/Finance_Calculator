@@ -7,6 +7,7 @@ import datetime
 import os
 import csv
 import getpass
+import sqlite3 as sql3
 
 #Greeting Message
 print("Welcome to your personal finance calculator! Created by puddlejumper90.")
@@ -26,6 +27,9 @@ TBL()
 #Input values and variables
 user = getpass.getuser()
 filename = "FC_Log.csv"
+database = "FC_Database.sqlite3"
+
+#Application Processes
 y_salary = float(input("Input salary, no special characters are needed: "))
 TBL()
 y_tax = float(input("Input expected tax rate as a decimal number (a percentage): "))
@@ -66,12 +70,12 @@ print("Also, if you decide to invest, there is a good chance that your money wil
 TBL()
 print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
 
+#Attribute and value lists
 LIST_OF_ATTRIBUTES = ["current_time", "user", "y_salary", "y_tax", "salary_after_tax", "monthly_pay", "bi_weekly_pay", "savings", "savings_calc", "salary_after_savings", "monthly_savings", "monthly_expenses", "left_over", "note"]
 LIST_OF_VALUES = [current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over, note]
-
+Data_Upload = [(current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over, note)]
 
 #More defined functions
-
 def information():
     print("1. The purpose of this application is to provide you with enough information to make smart decisions when it comes to your finances.")
     print("2. This application keeps track of all of your inquiries so that you can analyze all of the information via spreadsheet applications.")
@@ -80,6 +84,7 @@ def add_row():
     with open("FC_Log.csv", "a", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(LIST_OF_VALUES)
+    print("The CSV file has been updated!")
         
 def create_file(): #No matter what comes after this process, the csv log will already be established.
     if not os.path.isfile(filename): #This function searches the current directory for the csv file (listed above) and creates it if it does not exist
@@ -88,11 +93,38 @@ def create_file(): #No matter what comes after this process, the csv log will al
             writer.writerow(LIST_OF_ATTRIBUTES)  
             print("Created new csv file.")
             print("Moving on to next step.")
-        
+
+def database_create(): #Creates a database file if it does not exits
+     if not os.path.isfile(database):
+        conn = sql3.connect(database)
+        c = conn.cursor()
+        c.execute('''CREATE TABLE FC_Log
+             (current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over, note)''')
+        print("SQLite3 database has been created")
+        conn.commit()
+        conn.close()
+     else:
+        print("SQL Database was found! Moving on to next step...")  
+
+def add_SQL_Values(): #Adds new row to the established SQLite database
+    conn = sql3.connect(database)
+    c = conn.cursor()
+    c.executemany("INSERT into FC_Log (current_time, user, y_salary, y_tax, salary_after_tax, monthly_pay, bi_weekly_pay, savings, savings_calc, salary_after_savings, monthly_savings, monthly_expenses, left_over, note) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)", Data_Upload)
+    conn.commit()
+    conn.close()
+    print("Your query has been successfully added to the SQL database!")
+
+def help_now():
+    print("Answer all of the application's questions. The results will then be saved into both a CSV file and a SQLite database. These can be located in the application's current directory.")
+
 #Post-query application
 
-create_file()
+create_file() #Create CSV file if it does not exist
 TBL()
-add_row()
+add_row() #Append CSV file
 TBL()
-print("This query has been logged.")
+database_create() #Create SQL database if it does not exist
+TBL()
+add_SQL_Values() #Adds new values to the SQL database
+TBL()
+print("This query has been logged. No further action is required.")
