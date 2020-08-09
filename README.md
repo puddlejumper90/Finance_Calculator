@@ -10,7 +10,7 @@ When running the application, simply follow the instructions to enter a full que
 
 NEWS:
 
-8/9/2020: The CSV log file will eventually be completely replaced by the SQL database. There is currently no timeframe for this change,
+8/9/2020: The CSV log file will eventually be completely replaced by the SQL database. There is currently no timeframe for this change.
 
 
 DISCLAIMER:
