@@ -1,6 +1,6 @@
 #Import all of the needed libraries
 import numpy as np
-import scipy as sp
+#import scipy as sp
 import pandas as pd
 import matplotlib as mb
 import datetime
@@ -8,6 +8,7 @@ import os
 import csv
 import getpass
 import sqlite3 as sql3
+import time
 
 #Greeting Message
 print("Welcome to your personal finance calculator! Created by puddlejumper90.")
@@ -22,6 +23,9 @@ def TBL(): #Inserts two blank lines so that the application output is easier to 
     print("")
     print("")
 
+def delay_two_sec(): #Delays the next function by two seconds
+    time.sleep(2)
+    
 TBL()
 
 #Input values and variables
@@ -59,16 +63,22 @@ thirty_year_savings = float(savings_calc * 30)
 print("----------------------------------------------------------------------------")
 print("After taxes, your monthly take-home pay is: $", monthly_pay)
 TBL()
+delay_two_sec()
 print("Your left over money each month should be: $", left_over)
 TBL()
+delay_two_sec()
 print("Amount put into savings each month: $", monthly_savings)
 TBL()
+delay_two_sec()
 print("Your yearly savings should be: $", savings_calc)
 TBL()
-print("If you save at this rate for 30 years, you will have: $", thirty_year_savings, "If you find a way to cut your monthly costs, more money will be available for savings!")
+delay_two_sec()
+print("If you save at this rate for 30 years, you will have: $", thirty_year_savings, ". If you find a way to cut your monthly costs, more money will be available for savings!")
 print("Also, if you decide to invest, there is a good chance that your money will grow with the economy.")
 TBL()
+delay_two_sec()
 print("THANK YOU FOR USING THE FINANCE CALCULATOR: We are looking to add more features to this application in the near future!")
+delay_two_sec()
 
 #Attribute and value lists
 LIST_OF_ATTRIBUTES = ["current_time", "user", "y_salary", "y_tax", "salary_after_tax", "monthly_pay", "bi_weekly_pay", "savings", "savings_calc", "salary_after_savings", "monthly_savings", "monthly_expenses", "left_over", "note"]
