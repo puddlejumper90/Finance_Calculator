@@ -1,6 +1,5 @@
 #Import all of the needed libraries
 import numpy as np
-#import scipy as sp
 import pandas as pd
 import matplotlib as mb
 import datetime
