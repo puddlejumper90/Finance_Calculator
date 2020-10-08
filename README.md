@@ -16,3 +16,14 @@ NEWS:
 *DISCLAIMER:*
 
 Please remember to backup your data. This application and its creators will not be held responsible for data that is accidentally erased by either the user or the user's computer.
+
+*Application Data Process*
+
+REMEMBER: All data is stored directly to the file path where this application is located.
+
+1. User enters requested data into the application
+2. The application creates a new CSV file if it does not exists
+3. Current query is logged into the CSV file
+4. Creates new sqlite database if it does not exist
+5. Query is logged to the database
+6. Application must be restarted to begin new query
