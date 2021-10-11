@@ -68,7 +68,7 @@ class analysis():
             basic_func.obl()
             return True
 
-#Aplication processes
+#Application processes
 analysis.file_check()
 analysis.user_counts()
 analysis.record_counts()
