@@ -15,13 +15,14 @@ class app_func():
         print('2. Dividend Income Calculator')
         print('3. Help')
         print('4. Exit')
+        print('5. Analyze Financial Log Data')
         print('')
         print('==================================================')
         #Create menu selection input options
         menu_select = str(input('Please select an option: '))
         #Create if statements for each menu option
         if menu_select == '1':
-            print('You have selected the finance calculator')
+            print('You have selected the FINANCE CALCULATOR')
             #open Finance_Calculator.py
             import Finance_Calculator
             Finance_Calculator.Finance_Calculator()
@@ -44,6 +45,12 @@ class app_func():
             print('You have selected to exit the program')
             time.sleep(1)
             exit()
+        elif menu_select == '5':
+            print('You have selected to analyze the financial log data')
+            time.sleep(1)
+            #open Data_Analysis.py
+            import Data_Analysis
+            Data_Analysis
         else:
             print('You have selected an invalid option')
             time.sleep(1)
