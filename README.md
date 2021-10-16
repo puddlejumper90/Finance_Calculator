@@ -1,3 +1,5 @@
+# Introduction
+
 A command-line calculator to help with your personal financial planning.
 
 As of 3/18/2020, the application can be used via a basic python IDE or the Linux command line.
@@ -8,10 +10,11 @@ This application will keep a record all queries both in a SQLite database and a 
 
 When running the application, simply follow the program's instructions to enter a full query. The application will then show you all of your relevant data for the information entered.
 
-NEWS:
+# NEWS:
 
 8/9/2020: The CSV file will eventually be replaced by the SQL database. There is currently no date for this change
 
+# Additional Details
 
 *DISCLAIMER:*
 
