@@ -6,7 +6,7 @@ import datetime
 import os
 import csv
 import getpass
-import sqlite3 as sql3
+#import sqlite3 as sql3
 import time
 
 #Greeting Message
@@ -30,7 +30,7 @@ TBL()
 #Input values and variables
 user = getpass.getuser()
 filename = "FC_Log.csv"
-database = "FC_Database.sqlite3"
+#database = "FC_Database.sqlite3"
 
 #Application Processes
 y_salary = float(input("Input salary, no special characters are needed: "))
@@ -131,9 +131,9 @@ def help_now():
 create_file() #Create CSV file if it does not exist
 TBL()
 add_row() #Append CSV file
+#TBL()
+#database_create() #Create SQL database if it does not exist
 TBL()
-database_create() #Create SQL database if it does not exist
-TBL()
-add_SQL_Values() #Adds new values to the SQL database
+#add_SQL_Values() #Adds new values to the SQL database
 TBL()
 print("This query has been logged. No further action is required.")
