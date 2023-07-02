@@ -35,7 +35,7 @@ filename = "FC_Log.csv"
 #Application Processes
 y_salary = float(input("Input salary, no special characters are needed: "))
 TBL()
-y_tax = float(input("Input expected tax rate as a decimal number (a percentage): "))
+y_tax = float(input("Input expected tax rate as a decimal number (i.e. 24% = 0.24): "))
 TBL()
 
 salary_after_tax = y_salary - (y_salary * y_tax)
@@ -44,7 +44,7 @@ monthly_pay = (salary_after_tax / 12)
 
 bi_weekly_pay = (monthly_pay / 2)
 
-savings = float(input("Input your estimated savings rate in a decimal number (a percentage): "))
+savings = float(input("Input your estimated savings rate in a decimal number (i.e. 24% = 0.24): "))
 TBL()
 
 #Additional calculations
@@ -54,7 +54,7 @@ monthly_savings = float(savings_calc / 12)
 
 monthly_expenses = float(input("Input your total monthly expenses as a decimal number:"))
 TBL()
-note = input("Please enter a note for this query: ")
+note = input("Please enter a note for thsi scenario: ")
 left_over = float(monthly_pay - (savings + monthly_expenses))
 thirty_year_savings = float(savings_calc * 30)
 
@@ -87,7 +87,7 @@ Data_Upload = [(current_time, user, y_salary, y_tax, salary_after_tax, monthly_p
 #More defined functions
 def information():
     print("1. The purpose of this application is to provide you with enough information to make smart decisions when it comes to your finances.")
-    print("2. This application keeps track of all of your inquiries so that you can analyze all of the information via spreadsheet applications.")
+    print("2. This application keeps track of all of your inquiries so that you can analyze all of the information via spreadsheet applications. All queries are saved to a local .csv file called 'FC_Log.csv'. ")
 
 def add_row():
     with open("FC_Log.csv", "a", newline="") as file:
