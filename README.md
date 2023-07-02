@@ -12,7 +12,8 @@ When running the application, simply follow the program's instructions to enter 
 
 # NEWS:
 
-8/9/2020: The CSV file will eventually be replaced by the SQL database. There is currently no date for this change
+* 8/9/2020: The CSV file will eventually be replaced by the SQL database. There is currently no date for this change
+* 7/2/2023: This open source version will contain no data pipeline functionality to move `.csv` information to a Postgresql server. This process will be to be developed by the user.
 
 # Additional Details
 
