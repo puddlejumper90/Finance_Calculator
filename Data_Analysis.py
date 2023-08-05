@@ -1,6 +1,6 @@
 #Import the needed libraries that can analyze the data in a csv file
 import pandas as pd
-import pandasql as psql
+#import pandasql as psql
 import matplotlib.pyplot as plt
 import numpy as np
 #import seaborn as sns
@@ -8,7 +8,7 @@ import time
 import datetime
 import os
 import sys
-import tkinter as tk
+#import tkinter as tk
 
 #Basic application values
 #The file name of the csv file

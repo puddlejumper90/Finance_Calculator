@@ -19,7 +19,7 @@ When running the application, simply follow the program's instructions to enter 
 
 *DISCLAIMER:*
 
-Please remember to backup your data. This application and its creators will not be held responsible for data that is accidentally erased by either the user or the user's computer.
+Please remember to backup your data. This application and its creators will not be held responsible for data that is accidentally erased by either the user or the user's computer. Please make sure to maintain your `FC_Log.csv` file in a safe location. This file has been added to the `.gitignore` file to prevent accidental upload to the public repo.
 
 *Application Data Process*
 

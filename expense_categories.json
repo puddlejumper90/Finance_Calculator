@@ -1,0 +1,62 @@
+[
+    {
+      "id": "1",
+      "category": "Housing",
+      "minimum": ".25",
+      "maximum": ".35"
+    },
+    {
+      "id": "2",
+      "category": "Transportation",
+      "minimum": ".1",
+      "maximum": ".15"
+    },
+    {
+      "id": "3",
+      "category": "Food",
+      "minimum": ".1",
+      "maximum": ".15"
+    },
+    {
+      "id": "4",
+      "category": "Utilities",
+      "minimum": ".05",
+      "maximum": ".10"
+    },
+    {
+      "id": "5",
+      "category": "Insurance",
+      "minimum": ".01",
+      "maximum": ".25"
+    },
+    {
+      "id": "6",
+      "category": "Medical & Healthcare",
+      "minimum": ".05",
+      "maximum": ".10"
+    },
+    {
+      "id": "7",
+      "category": "Saving & Investing & Debt Payments",
+      "minimum": ".1",
+      "maximum": ".2"
+    },
+    {
+      "id": "8",
+      "category": "Personal Spending",
+      "minimum": ".05",
+      "maximum": ".1"
+    },
+    {
+      "id": "9",
+      "category": "Recreation & Entertainment",
+      "minimum": ".05",
+      "maximum": ".10"
+    },
+    {
+      "id": "10",
+      "category": "Misc.",
+      "minimum": ".05",
+      "maximum": ".10"
+    }
+]

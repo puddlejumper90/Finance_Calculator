@@ -54,7 +54,7 @@ monthly_savings = float(savings_calc / 12)
 
 monthly_expenses = float(input("Input your total monthly expenses as a decimal number:"))
 TBL()
-note = input("Please enter a note for thsi scenario: ")
+note = input("Please enter a note for this scenario: ")
 left_over = float(monthly_pay - (savings + monthly_expenses))
 thirty_year_savings = float(savings_calc * 30)
 
